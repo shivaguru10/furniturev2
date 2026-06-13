@@ -52,7 +52,7 @@ export default function Marquee({
 
   return (
     <div 
-      className={cn("overflow-hidden w-full relative", className)}
+      className={cn("w-full relative", className)}
       style={{
         maskImage: "linear-gradient(to right, transparent, black 5%, black 95%, transparent)",
         WebkitMaskImage: "linear-gradient(to right, transparent, black 5%, black 95%, transparent)",
@@ -61,11 +61,11 @@ export default function Marquee({
       <div 
         ref={emblaRef} 
         className={cn(
-          "flex w-full select-none cursor-grab active:cursor-grabbing",
+          "overflow-hidden w-full select-none cursor-grab active:cursor-grabbing",
           isPointerDown && "cursor-grabbing"
         )}
       >
-        <div className="flex shrink-0 items-center w-full backface-hidden">
+        <div className="flex items-center backface-hidden">
           {React.Children.map(children, (child, index) => (
             <div 
               key={index} 
