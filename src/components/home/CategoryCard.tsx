@@ -11,7 +11,7 @@ export default function CategoryCard({ category, isLast }: CategoryCardProps) {
   return (
     <Link 
       href={`/category/${category.slug}`}
-      className={`group flex flex-col items-center gap-3 w-[calc((100%-48px)/3.5)] flex-shrink-0 ${isLast ? 'snap-end' : 'snap-start'} md:w-[calc((100%-96px)/4.5)] lg:w-full lg:flex-shrink lg:min-w-0 transition-transform duration-300 active:scale-[0.98] cursor-pointer`}
+      className={`group flex flex-col items-center gap-2 lg:gap-3 w-[92px] sm:w-[110px] md:w-[130px] flex-shrink-0 ${isLast ? 'snap-end' : 'snap-start'} lg:w-full lg:flex-shrink lg:min-w-0 transition-transform duration-300 active:scale-[0.98] cursor-pointer`}
     >
       <div className="w-full aspect-square rounded-2xl bg-muted overflow-hidden relative shadow-sm group-hover:shadow-md transition-shadow duration-300">
         <Image
